@@ -14,7 +14,6 @@ q = append((i, j)).        // append the tuple to the end
 cur = q.removeFirst().     // error if the list is empty
 ```
 
-
 ## Set
 
 ```swift

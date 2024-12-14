@@ -3,27 +3,75 @@
   - [Lists](#lists)
   - [Set](#Set)
 
+## List
+
+```swift
+var result = [Int](repeating: 0, count: 10)  // init arr with repeated default values
+```
 ## Queue
 
-We could use list as queue
 ```swift
-var q = [(Int, Int)]().    //intialize an tuple 
+var q = [(Int, Int)]()    //intialize an tuple 
 q.isEmpty                  //error if not initialized
 q.count
-q = append((i, j)).        // append the tuple to the end 
-cur = q.removeFirst().     // error if the list is empty
+q.append((i, j)).        // append the tuple to the end 
+var rmvd = q.removeFirst() // error if the list is empty, return element
+```
+
+## Dict
+
+```swift
+var dict = [String:Double]()
+
+```
+
+## Stack
+
+```swift
+var stack:[Character] = []     //intialize an tuple 
+stack.append("a").             // append the tuple to the end 
+var rmvd = stack.removeLast()  // err if the list is empty, return element
 ```
 
 ## Set
 
 ```swift
-
+var set = Set<Int>()         //initialize a Set for Int
+set.insert(1)                
+if set.contains(1) {}            
+var rmvd = set.remove(2)     //remove element, return nil if not exist (no err)
 ```
 
 
-Swift Cheatsheet
+## Iteration
 
-inout parameters
+```swift
+// Integer
+for i in (1...3).reversed() {}
+for i in stride(from:3,through:1,by:-1) {} // 3,2,1
+for i in stride(from:3,to:1,by:-1) {} // 3,2
+// Double
+for i in stride(from: 0.5, through: -0.1, by: -0.2) { print(i) } // this is not reliable :thinking
+```
+
+## Math
+
+```swift
+let total = numbers.reduce(0, +)         // calculate sum
+
+```
+
+## String Integer Conversion
+
+```swift
+// String to Int conversion
+var a = Int("-11")   // returned as Optional<Int>
+let b = Int("abc") ?? 0  // returned as 
+```
+
+
+## Function
+
 ```swift
 func swap(_ nums : inout [Int], _ first: Int, _ second: Int) {
 	let temp = nums[first]
@@ -31,3 +79,31 @@ func swap(_ nums : inout [Int], _ first: Int, _ second: Int) {
 	nums[second] = temp
 }
 swap(&nums, i, num[i])
+```
+
+
+## Others
+
+```swift
+print(type(of: a))      // print type of object
+
+// Nil-Coalescing Operator
+let defaultColorName = "red"
+var userDefinedColorName: String?
+var colorNameToUse = userDefinedColorName ?? defaultColorName
+```
+
+## Character & String
+
+```swift
+let str = "abc"
+var chars = Array(str)      // convert to char array
+// Iterate char in a string
+for char in s {}
+for i in 0..<s.count {
+	var char = s[s.index(s.startIndex, offsetBy: i)]  // char is Character type
+}
+// Substring
+let range = s.startIndex..<s.index(s.startIndex, offsetBy: i)
+var subStr = s[range] 
+```

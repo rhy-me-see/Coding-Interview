@@ -22,6 +22,8 @@ var rmvd = q.removeFirst() // error if the list is empty, return element
 
 ```swift
 var dict = [String:Double]()
+dict["a"] = 0.2
+let b = dict["a"]       // dict will return Optional<Double>
 
 ```
 
@@ -96,8 +98,8 @@ var colorNameToUse = userDefinedColorName ?? defaultColorName
 ## Character & String
 
 ```swift
-let str = "abc"
-var chars = Array(str)      // convert to char array
+let s = "abc"
+var chars = Array(s)      // convert to char array
 // Iterate char in a string
 for char in s {}
 for i in 0..<s.count {
@@ -105,5 +107,9 @@ for i in 0..<s.count {
 }
 // Substring
 let range = s.startIndex..<s.index(s.startIndex, offsetBy: i)
-var subStr = s[range] 
+let subStr = s[range] 
+
+// char at index 
+let charAt = s[s.index(s.startIndex, offsetBy: i)] // this will return Character
+
 ```

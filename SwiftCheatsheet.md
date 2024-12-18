@@ -44,6 +44,35 @@ if set.contains(1) {}
 var rmvd = set.remove(2)     //remove element, return nil if not exist (no err)
 ```
 
+## Heap
+
+```swift
+import HeapModule
+var heap = Heap<Person>()
+heap.insert(Person("Anthony"))
+var min = heap.min
+var max = heap.max
+var popMax = heap.popMax()
+var popMin = heap.popMin()
+```
+
+## Comparable
+
+```swift
+class Person: Comparable {
+	let name: String
+	init(name: String) {
+		self.name = name
+	}
+	func < (lhs: Person, rhs: Person) -> Bool {
+		return lhs.name < rhs.name
+	}
+	func < (lhs: Person, rhs: Person) -> Bool {
+		return lhs.name == rhs.name
+	}
+}
+```
+
 
 ## Iteration
 
@@ -112,4 +141,6 @@ let subStr = s[range]
 // char at index 
 let charAt = s[s.index(s.startIndex, offsetBy: i)] // this will return Character
 
+// Stirng Parsing
+var arr = string.components(separatedBy: ",")
 ```

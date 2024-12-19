@@ -24,6 +24,12 @@ var rmvd = q.removeFirst() // error if the list is empty, return element
 var dict = [String:Double]()
 dict["a"] = 0.2
 let b = dict["a"]       // dict will return Optional<Double>
+// Iterating through dict
+for (key, value) in dict {}
+for k in dict.keys {}
+// Sort 
+dict.sorted(by: { $0.1 < $1.0 })    //sorted by key -> ascending order
+// Dict Index
 
 ```
 

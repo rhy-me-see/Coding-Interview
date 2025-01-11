@@ -10,6 +10,7 @@ var result = [Int](repeating: 0, count: 10)  // init arr with repeated default v
 var arr = [1,2,3,4]
 arr.reverse()    // revere the array inline
 arr.swapAt(i, j) // swap the arr with indexes
+arr.insert(newElement, i)
 ```
 ## Queue
 
@@ -48,7 +49,10 @@ var rmvd = stack.removeLast()  // err if the list is empty, return element
 
 ```swift
 var set = Set<Int>()         //initialize a Set for Int
-set.insert(1)                
+set.insert(1)
+set.insert(1).inserted
+                             //(true, newMember) if `newMember` was not contained in the set.  
+                             //(false, oldMember) if an element equal to `newMember` was already contained in the set
 if set.contains(1) {}            
 var rmvd = set.remove(2)     //remove element, return nil if not exist (no err)
 ```
@@ -98,6 +102,14 @@ for i in stride(from: 0.5, through: -0.1, by: -0.2) { print(i) } // this is not 
 
 ```swift
 let total = numbers.reduce(0, +)         // calculate sum
+
+```
+
+## Bit Operations
+
+[Bit Operations](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/advancedoperators/)
+
+```swift
 
 ```
 

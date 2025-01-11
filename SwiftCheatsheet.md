@@ -7,6 +7,9 @@
 
 ```swift
 var result = [Int](repeating: 0, count: 10)  // init arr with repeated default values
+var arr = [1,2,3,4]
+arr.reverse()    // revere the array inline
+arr.swapAt(i, j) // swap the arr with indexes
 ```
 ## Queue
 

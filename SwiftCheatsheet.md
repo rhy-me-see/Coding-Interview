@@ -11,6 +11,10 @@ var arr = [1,2,3,4]
 arr.reverse()    // revere the array inline
 arr.swapAt(i, j) // swap the arr with indexes
 arr.insert(newElement, i)
+// Sort
+arr.sort()  // in place sort for the arr
+var sortedArr = arr.sorted() // [1,2,3,4]
+var descendingArr = arr.sorted(by: >) // [4,3,2,1]
 ```
 ## Queue
 
@@ -27,13 +31,14 @@ var rmvd = q.removeFirst() // error if the list is empty, return element
 ```swift
 var dict = [String:Double]()
 dict["a"] = 0.2
-let b = dict["a"]       // dict will return Optional<Double>
+dict.removeValue(forKey:"key") // remove an entry based on key
+var b = dict["a"]  // dict will return Optional<Double>
+
 // Iterating through dict
 for (key, value) in dict {}
 for k in dict.keys {}
 // Sort 
 dict.sorted(by: { $0.1 < $1.0 })    //sorted by key -> ascending order
-// Dict Index
 
 ```
 
@@ -86,7 +91,6 @@ class Person: Comparable {
 }
 ```
 
-
 ## Iteration
 
 ```swift
@@ -101,7 +105,9 @@ for i in stride(from: 0.5, through: -0.1, by: -0.2) { print(i) } // this is not 
 ## Math
 
 ```swift
-let total = numbers.reduce(0, +)         // calculate sum
+let total = numbers.reduce(0, +)  // calculate sum
+let rand = Int.random(in: 0...10) // generate integer in range [0,10]
+let squareRoot = Int(Double(5).squareRoot()) // --> 2
 
 ```
 
@@ -150,6 +156,7 @@ var colorNameToUse = userDefinedColorName ?? defaultColorName
 ```swift
 let s = "abc"
 var chars = Array(s)      // convert to char array
+var aVal = Int(chars[0].asciiValue!) // ascii val from UInt8 --> Int
 // Iterate char in a string
 for char in s {}
 for i in 0..<s.count {

@@ -73,8 +73,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -159,7 +158,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1a228825e27ab866",
+  "active": "f109ff5d2ef9a83f",
   "lastOpenFiles": [
     "README.md"
   ]

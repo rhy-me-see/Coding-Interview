@@ -1,6 +1,6 @@
 # Table of Contents
 
-  - [Lists](#lists)
+  - [List](#list)
   - [Set](#Set)
 
 ## List

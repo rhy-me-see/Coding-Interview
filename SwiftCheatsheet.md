@@ -108,7 +108,28 @@ for i in stride(from: 0.5, through: -0.1, by: -0.2) { print(i) } // this is not 
 let total = numbers.reduce(0, +)  // calculate sum
 let rand = Int.random(in: 0...10) // generate integer in range [0,10]
 let squareRoot = Int(Double(5).squareRoot()) // --> 2
+```
 
+## Character & String
+
+```swift
+let s = "abc"
+var chars = Array(s)      // convert to char array
+var aVal = Int(chars[0].asciiValue!) // ascii val from UInt8 --> Int
+// Iterate char in a string
+for char in s {}
+for i in 0..<s.count {
+	var char = s[s.index(s.startIndex, offsetBy: i)]  // char is Character type
+}
+// Substring
+let range = s.startIndex..<s.index(s.startIndex, offsetBy: i)
+let subStr = s[range] 
+
+// char at index 
+let charAt = s[s.index(s.startIndex, offsetBy: i)] // this will return Character
+
+// Stirng Parsing
+var arr = string.components(separatedBy: ",")
 ```
 
 ## Bit Operations
@@ -151,24 +172,3 @@ var userDefinedColorName: String?
 var colorNameToUse = userDefinedColorName ?? defaultColorName
 ```
 
-## Character & String
-
-```swift
-let s = "abc"
-var chars = Array(s)      // convert to char array
-var aVal = Int(chars[0].asciiValue!) // ascii val from UInt8 --> Int
-// Iterate char in a string
-for char in s {}
-for i in 0..<s.count {
-	var char = s[s.index(s.startIndex, offsetBy: i)]  // char is Character type
-}
-// Substring
-let range = s.startIndex..<s.index(s.startIndex, offsetBy: i)
-let subStr = s[range] 
-
-// char at index 
-let charAt = s[s.index(s.startIndex, offsetBy: i)] // this will return Character
-
-// Stirng Parsing
-var arr = string.components(separatedBy: ",")
-```

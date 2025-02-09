@@ -170,5 +170,9 @@ print(type(of: a))      // print type of object
 let defaultColorName = "red"
 var userDefinedColorName: String?
 var colorNameToUse = userDefinedColorName ?? defaultColorName
+
+// Ternary Operator
+
+// How does let works for reference 
 ```
 

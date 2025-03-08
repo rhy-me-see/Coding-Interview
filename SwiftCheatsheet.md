@@ -116,6 +116,7 @@ let squareRoot = Int(Double(5).squareRoot()) // --> 2
 let s = "abc"
 var chars = Array(s)      // convert to char array
 var aVal = Int(chars[0].asciiValue!) // ascii val from UInt8 --> Int
+let char = Character(UnicodeScalar(i + Int(Character("a").asciiValue!))!) // ascii integer to the character
 // Iterate char in a string
 for char in s {}
 for i in 0..<s.count {

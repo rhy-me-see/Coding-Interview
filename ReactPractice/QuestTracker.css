@@ -1,0 +1,52 @@
+
+.container {
+    /* align-items:center; */
+    /* max-width: 400;*/
+    margin: 20px auto; 
+    max-width: 1000px;
+    border: 1px solid #ccc;
+}
+
+h1 {
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.quest-tracker {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    flex-direction: row; /* 主轴 */
+    justify-content: space-between; /* 主轴对齐 */
+    align-items:center; /* 交叉轴对齐 */
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor:pointer;
+    height: 40px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

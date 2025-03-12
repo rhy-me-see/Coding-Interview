@@ -2,6 +2,11 @@
 ### General Information
 
 Ads Product: https://discord.com/ads/quests
+
+### Self Introduction
+
+Hi I’m Ruohua who is currently working at snap, i’m with the activation team in core growth organization. My team is a combination of mobile and backend engineers, responsible for login， sign up, and user onboarding features to best retain DAU and DNU metrics, and maximize user engagement. My current role is to lead a team of 3 engineers for an in-app feature-promotion platform. It's to help internal teams onboard in app campaigns to enhance feature visibility, notify users of important information, remind users to enable their contact or notification permission. As for technical stack, I’m primarily working on iOS development with swift or objective-c, with 20% backend.
+
 ## Retrospective Exercise (技术回顾 & 复盘)
 
 STAR Principle (Situation / Target / Action / Result)

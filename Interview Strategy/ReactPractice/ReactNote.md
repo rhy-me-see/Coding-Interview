@@ -12,3 +12,6 @@
 command: npx create-next-app@latest 
 ```
 
+
+[Typescript / Javascript common syntax](https://chatgpt.com/c/67cdfda3-debc-8005-820b-8a1871707465)
+

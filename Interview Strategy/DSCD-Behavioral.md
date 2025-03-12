@@ -22,6 +22,11 @@ Strive for Excellence --> 抓住机会做值得骄傲的工作，发挥周围人
 ```
 
 
+## Other Examples
+
+- Client Pre-check Targeting --> COF server / client targeting -> reuse 
+- UI Config Customization. 
+
 #### **Question: Tell me about a time you improved from feedback.**
 
 **Situation:** Early in my career, I used to focus on providing very detailed responses when communicating with teammates. For example,

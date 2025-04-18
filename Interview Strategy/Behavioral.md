@@ -10,17 +10,9 @@ Hi I’m Ruohua who is currently working at snap, i’m with the activation team
 ## Retrospective Exercise (技术回顾 & 复盘)
 
 STAR Principle (Situation / Target / Action / Result)
-Company Culture (https://discord.com/blog/the-seven-principles-of-working-at-discord) 
-```
-Cultivate Belonging --> 善意理解，努力理解其它人的观点
-Deliver for Customers --> 关注需求，而不是竞争
-Surprise & Delight --> 关心细节
-Debate, Decide, Commit --> 收集信息，推动决策落地, 协调不同意见
-Progress Over Perfection --> 长远考虑，分解想法
-Embrace the Brutal Facts --> 冒险做重要的事情
-Strive for Excellence --> 抓住机会做值得骄傲的工作，发挥周围人潜能
-```
-
+#### Culture Page
+ - [Discord](https://discord.com/blog/the-seven-principles-of-working-at-discord)
+ - [Doordash](https://careersatdoordash.com/mission-and-values/) (leaders /  doers / learners / one team)
 
 ## Other Examples
 

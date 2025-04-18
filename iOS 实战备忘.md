@@ -23,13 +23,14 @@ URLSession.shared.dataTaskPublisher(for: url)
                   response.statusCode == 200 else {
                     throw URLError(.badServerResponse)
                 }
-		print("response: \(response)")
-		print("data: \(data)")
+		print("response: \(response), data: \(data)")
 		return data
 	})
 	.decode(type: FileModel.self, decoder: JSONDecoder())
 	.sink { (completion) in
-		print("completion: \(completion)")
+		if case .failure(let error) = completion {
+            print("Error: \(error)")
+        }
 	} receiveValue: { (returnedFileModel) in
 		let fm = returnedFileModel as FileModel
 		self.posts = fm.content
@@ -58,6 +59,18 @@ struct OrderItems: Codable, Identifiable {
         self.displayPrice = try container.decodeIfPresent(String.self, forKey: .displayPrice) ?? "Free"
     }
 }
+```
+
+
+### DispatchQueue
+
+```swift 
+// sync queue by default
+let queue = DispatchQueue(label: "image.queue")
+queue.async{ ... } // seriel execution
+// async queue 
+let queue = DispatchQueue(label: "image.queue", attributes: .concurrent)
+queue.async(flags: .barriers) { ... } // execute in order when barriers defined
 ```
 
 ## SwiftUI Component
@@ -206,6 +219,29 @@ func loadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
 
 ```
 
+### Network Request with URLSession
+
+```swift
+let url = URL(string: "https://api.example.com/menu")!
+var request = URLRequest(url: url)
+request.httpMethod = "GET"
+
+URLSession.shared.dataTask(with: request) { data, response, error in
+    guard let data = data, error == nil else {
+        print("Error: \(error?.localizedDescription ?? "unknown error")")
+        return
+    }
+
+    do {
+        let result = try JSONDecoder().decode(MenuResponse.self, from: data)
+        DispatchQueue.main.async {
+            self.menuItems = result.items
+        }
+    } catch {
+        print("Decoding error: \(error)")
+    }
+}.resume()
+```
 ### Replace storyboard and set root view controller
 
 **在 `Info.plist` 中删除这一行：**`<key>UIMainStoryboardFile</key> <string>Main</string>`
